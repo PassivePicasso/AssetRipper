@@ -19,7 +19,7 @@
   </Target>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy $(TargetPath) $(SolutionDir)Bins\AssetRipperGUI\$(ConfigurationName)\Plugins\$(TargetFileName)" />
+    <Exec Command="mkdir $(SolutionDir)Bins\AssetRipperGUI\$(ConfigurationName)\Plugins&#xD;&#xA;copy $(TargetPath) $(SolutionDir)Bins\AssetRipperGUI\$(ConfigurationName)\Plugins\$(TargetFileName)" />
   </Target>
 
 </Project>
